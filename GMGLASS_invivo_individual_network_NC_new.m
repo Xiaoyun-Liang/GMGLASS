@@ -129,7 +129,7 @@ for i=1:90
     end
 end
 
-%% Thr (P_thr) is calculated by using equation 9
+%% Thr (P_thr) is calculated for individual subject by using equation 9. For different data, one should recalculate these values accordingly.
 SV=zeros(90,90); % stable variable
 Thr=0.71;
 for i=1:90
