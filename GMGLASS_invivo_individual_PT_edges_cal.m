@@ -13,7 +13,8 @@
 
 %%
 clear all
-load('.../Y_PT.mat')
+load('.../I1_FMGL_GGL_SS200_50_invivo_individual_rand_200_PT2016.mat')
+Y=I1PT
 Y1_reshape=reshape(Y(:,:,13,:,:,:),90,90,100,50);
 % Y2_reshape=reshape(Y2,78,78,100,50);
 for i=1:90

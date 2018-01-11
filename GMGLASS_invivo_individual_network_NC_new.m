@@ -12,8 +12,30 @@
 
 %%
 clear all
+load('.../I1_FMGL_GGL_SS200_50_invivo_individual_rand_200_NC2016.mat')
+Y=I2NC;
+for lambda1=1:10
+    for lambda2=1:5
+       for k=1:13 
+          for i=1:90
+             for j=1:90
+                 for m=1:100
+                     if Y(i,j,k,m,lambda1,lambda2)<0
+                         I(i,j,k,m,lambda1,lambda2)=1;
+                     else
+                         I(i,j,k,m,lambda1,lambda2)=0;
+                     end
+                 
+                 end
+             S(i,j,k,lambda1,lambda2)=sum(I(i,j,k,:,lambda1,lambda2))/100;
+          end
+       end
+       end
+    end
+end
 
-load('.../S_indiviudal_negative_rank_NC.mat')
+save('.../S_indiviudal_negative_NC.mat','S');
+
 
 sum_S=zeros(90,90,10,5);
 for i=1:13

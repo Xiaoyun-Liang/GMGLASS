@@ -13,8 +13,9 @@
 
 %%
 clear all
-load('.../Y_NC.mat')
-Y1_reshape=reshape(Y(:,:,1,:,:,:),90,90,100,50);
+load('.../I1_FMGL_GGL_SS200_50_invivo_individual_rand_200_NC2016.mat')
+Y=I2NC;
+Y1_reshape=reshape(Y(:,:,1,:,:,:),90,90,100,50); %just an example for the first subject here
 % Y2_reshape=reshape(Y2,78,78,100,50);
 for i=1:90
     for j=1:90

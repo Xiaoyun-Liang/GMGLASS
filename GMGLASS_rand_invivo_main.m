@@ -9,7 +9,8 @@
 % Output data:(1) S: Stable matrix across 200 subsamples (p*p*lambda*rho)
 %            (2) Y: Estimated networks at group-level (size: p*p*w*lambda*rho)
 %            (3) I: Estimated networks at individual-level (size:p*p*k*w*lambda*rho):I1PT, I2NC
-
+%             with k: number of subjects in each group, w: number of
+%             iterations
 
 
 %Note:(1) Alpha and beta can be adjusted;
